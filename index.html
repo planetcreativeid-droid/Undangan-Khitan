@@ -48,7 +48,7 @@
             text-shadow: 0px 2px 4px rgba(184, 134, 11, 0.5);
         }
         
-        /* New style for bottom navigation */
+        /* Style for bottom navigation */
         .nav-link {
             background-color: white;
             color: #78350f; /* amber-800 */
@@ -57,6 +57,25 @@
             background-color: #78350f; /* amber-800 */
             color: white;
         }
+
+        /* --- STYLING TOMBOL BUKA UNDANGAN --- */
+        /* Anda dapat dengan mudah mengubah tampilan tombol di bawah ini */
+        .open-invitation-btn {
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih transparan */
+            color: #78350f; /* Warna teks (coklat tua) */
+            font-weight: 700; /* Ketebalan teks */
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Garis tepi putih transparan */
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px); /* Kompatibilitas untuk Safari */
+            transition: all 0.2s ease-in-out;
+        }
+
+        .open-invitation-btn:hover {
+            background-color: white; /* Latar belakang saat disentuh mouse */
+            transform: scale(1.05); /* Efek sedikit membesar saat disentuh */
+        }
+        /* --- AKHIR STYLING TOMBOL --- */
+
     </style>
 </head>
 <body class="text-gray-800">
@@ -85,7 +104,7 @@
             <h2 class="font-tangerine text-6xl md:text-8xl font-bold shadow-gold" data-aos="fade-up">Muhammad Kenzie</h2>
             <p class="mt-8 text-lg" data-aos="fade-up" data-aos-delay="200">Kepada Yth.</p>
             <p class="font-semibold text-xl" data-aos="fade-up" data-aos-delay="300" id="guest-name">Bapak/Ibu/Saudara/i</p>
-            <button id="open-invitation" class="mt-8 bg-white hover:bg-gray-200 text-amber-900 font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+            <button id="open-invitation" class="open-invitation-btn mt-8 py-3 px-8 rounded-full shadow-lg" data-aos="fade-up" data-aos-delay="400">
                 Buka Undangan
             </button>
         </div>
