@@ -88,7 +88,7 @@
 
     <!-- Tombol Kontrol Musik -->
     <div id="music-control" class="fixed bottom-28 md:bottom-5 right-5 z-50 hidden">
-        <button onclick="toggleMusic()" class="bg-amber-800/80 text-white rounded-full p-3 shadow-lg">
+        <button id="music-button" onclick="toggleMusic()" class="bg-amber-800/80 text-white rounded-full p-3 shadow-lg transition-colors duration-300">
             <i id="music-icon" data-feather="music"></i>
         </button>
     </div>
@@ -297,6 +297,7 @@
         const music = document.getElementById('background-music');
         const musicControl = document.getElementById('music-control');
         const musicIcon = document.getElementById('music-icon');
+        const musicButton = document.getElementById('music-button');
         const bottomNav = document.getElementById('bottom-nav');
         let isMusicPlaying = false;
 
@@ -333,9 +334,15 @@
             if (isMusicPlaying && !forcePlay) {
                 music.pause();
                 musicIcon.setAttribute('data-feather', 'volume-x');
+                // Ubah warna ke mode jeda
+                musicButton.classList.remove('bg-amber-800/80');
+                musicButton.classList.add('bg-slate-500/80');
             } else {
                 music.play().catch(error => console.log("Autoplay was prevented."));
                 musicIcon.setAttribute('data-feather', 'music');
+                 // Ubah warna ke mode putar
+                musicButton.classList.remove('bg-slate-500/80');
+                musicButton.classList.add('bg-amber-800/80');
             }
             isMusicPlaying = !isMusicPlaying;
             feather.replace();
