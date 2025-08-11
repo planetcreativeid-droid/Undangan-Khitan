@@ -330,7 +330,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
         // Your web app's Firebase configuration
@@ -348,6 +348,7 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+        setLogLevel('debug'); // Enable debug logging
         const auth = getAuth(app);
 
         // --- Firestore Logic ---
@@ -386,6 +387,7 @@
         function listenForWishes() {
              const q = query(collection(db, wishesCollectionPath));
              onSnapshot(q, (querySnapshot) => {
+                console.log("Wishes snapshot received:", querySnapshot.size);
                 const wishes = [];
                 querySnapshot.forEach((doc) => {
                     wishes.push(doc.data());
@@ -396,7 +398,7 @@
             }, (error) => {
                 console.error("Error fetching wishes: ", error);
                 const wishesList = document.getElementById('wishes-list');
-                if(wishesList) wishesList.innerHTML = '<p class="text-center text-red-400">Gagal memuat ucapan.</p>';
+                if(wishesList) wishesList.innerHTML = '<p class="text-center text-red-400">Gagal memuat ucapan. Periksa konsol untuk detail.</p>';
             });
         }
 
@@ -434,6 +436,7 @@
         onAuthStateChanged(auth, async (user) => {
             if (user) {
                 // User is signed in.
+                console.log("User authenticated, fetching wishes...");
                 listenForWishes();
             } else {
                 // User is signed out. Sign in anonymously or with custom token.
