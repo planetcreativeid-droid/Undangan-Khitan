@@ -96,228 +96,233 @@
         }
     </style>
 </head>
-<body class="bg-dark-teal">
+<body class="bg-black">
 
-    <!-- Background Music -->
-    <audio id="background-music" loop>
-        <!-- Ganti source audio di bawah ini dengan link file musik Anda -->
-        <source src="https://firebasestorage.googleapis.com/v0/b/canvas-testing-389101.appspot.com/o/1709871295321-hymne-ui.mp3?alt=media&token=c061266b-4aed-4a25-8378-0d9229fb443f" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Mobile View Container -->
+    <div class="relative max-w-md mx-auto bg-dark-teal shadow-2xl min-h-screen overflow-hidden">
 
-    <!-- Music Player Controls -->
-    <div id="music-player" class="hidden fixed bottom-5 right-5 z-50">
-        <button id="music-toggle" class="w-12 h-12 bg-gold/80 text-dark-teal rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm">
-            <i class="fas fa-music spin-slow"></i>
-        </button>
-    </div>
+        <!-- Background Music -->
+        <audio id="background-music" loop>
+            <!-- Ganti source audio di bawah ini dengan link file musik Anda -->
+            <source src="https://firebasestorage.googleapis.com/v0/b/canvas-testing-389101.appspot.com/o/1709871295321-hymne-ui.mp3?alt=media&token=c061266b-4aed-4a25-8378-0d9229fb443f" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-    <!-- Cover Section -->
-    <div id="cover" class="fixed top-0 left-0 w-full h-full bg-dark-teal z-[100] flex flex-col justify-center items-center text-center p-6" style="background-image: url('https://images.unsplash.com/photo-1599667931367-e6822b322feb?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="relative z-10 text-white" data-aos="fade-up">
-            <p class="text-lg">The Khitanan of</p>
-            <h1 class="font-cursive text-6xl md:text-8xl my-4 text-gold">Kenzie</h1>
-            <p class="mb-6">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-            <p id="guest-name" class="text-2xl font-bold mb-8"></p>
-            <button id="open-invitation" class="btn-gold font-bold py-3 px-8 rounded-full shadow-lg">
-                <i class="fas fa-envelope-open mr-2"></i>
-                Buka Undangan
+        <!-- Music Player Controls -->
+        <div id="music-player" class="hidden absolute bottom-5 right-5 z-50">
+            <button id="music-toggle" class="w-12 h-12 bg-gold/80 text-dark-teal rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm">
+                <i class="fas fa-music spin-slow"></i>
             </button>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <main id="main-content" class="opacity-0 transition-opacity duration-1000">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-6 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1618215935338-9b2c89284353?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black/70"></div>
-            <!-- Ornaments with new landscape image -->
-            <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-tl">
-            <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-tr">
-            <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-bl">
-            <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-br">
+        <!-- Cover Section -->
+        <div id="cover" class="absolute top-0 left-0 w-full h-full bg-dark-teal z-[100] flex flex-col justify-center items-center text-center p-6" style="background-image: url('https://images.unsplash.com/photo-1599667931367-e6822b322feb?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 text-white" data-aos="fade-up">
+                <p class="text-lg">The Khitanan of</p>
+                <h1 class="font-cursive text-6xl md:text-8xl my-4 text-gold">Kenzie</h1>
+                <p class="mb-6">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <p id="guest-name" class="text-2xl font-bold mb-8"></p>
+                <button id="open-invitation" class="btn-gold font-bold py-3 px-8 rounded-full shadow-lg">
+                    <i class="fas fa-envelope-open mr-2"></i>
+                    Buka Undangan
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main id="main-content" class="opacity-0 transition-opacity duration-1000">
             
-            <div class="relative z-10">
-                <p class="font-cursive text-3xl text-gold" data-aos="fade-down">Bismillahirrahmannirrahim</p>
-                <h2 class="text-lg md:text-xl tracking-widest my-4" data-aos="fade-up">UNDANGAN KHITANAN</h2>
-                <h1 class="font-cursive text-6xl md:text-8xl text-gold my-4" data-aos="zoom-in">Muhammad Kenzie Alfaro</h1>
-                <p class="text-lg md:text-xl" data-aos="fade-up">Sabtu, 18 November 2025</p>
+            <!-- Hero Section -->
+            <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-6 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1618215935338-9b2c89284353?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-black/70"></div>
+                <!-- Ornaments with new landscape image -->
+                <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-tl">
+                <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-tr">
+                <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-bl">
+                <img src="https://i.ibb.co/dKqY7Jd/ornament-landscape.png" alt="Ornament" class="ornament ornament-br">
+                
+                <div class="relative z-10">
+                    <p class="font-cursive text-3xl text-gold" data-aos="fade-down">Bismillahirrahmannirrahim</p>
+                    <h2 class="text-lg md:text-xl tracking-widest my-4" data-aos="fade-up">UNDANGAN KHITANAN</h2>
+                    <h1 class="font-cursive text-6xl md:text-8xl text-gold my-4" data-aos="zoom-in">Muhammad Kenzie Alfaro</h1>
+                    <p class="text-lg md:text-xl" data-aos="fade-up">Sabtu, 18 November 2025</p>
 
-                <div id="countdown" class="flex justify-center space-x-4 mt-8 text-white" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
-                        <span id="days" class="text-3xl font-bold">00</span>
-                        <p class="text-xs">Hari</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
-                        <span id="hours" class="text-3xl font-bold">00</span>
-                        <p class="text-xs">Jam</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
-                        <span id="minutes" class="text-3xl font-bold">00</span>
-                        <p class="text-xs">Menit</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
-                        <span id="seconds" class="text-3xl font-bold">00</span>
-                        <p class="text-xs">Detik</p>
+                    <div id="countdown" class="flex justify-center space-x-4 mt-8 text-white" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
+                            <span id="days" class="text-3xl font-bold">00</span>
+                            <p class="text-xs">Hari</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
+                            <span id="hours" class="text-3xl font-bold">00</span>
+                            <p class="text-xs">Jam</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
+                            <span id="minutes" class="text-3xl font-bold">00</span>
+                            <p class="text-xs">Menit</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg w-20 text-center backdrop-blur-sm">
+                            <span id="seconds" class="text-3xl font-bold">00</span>
+                            <p class="text-xs">Detik</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Profile Section -->
-        <section id="profile" class="py-20 px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <p class="font-cursive text-4xl text-gold" data-aos="fade-down">Assalamu'alaikum Wr. Wb.</p>
-                <p class="mt-6 max-w-2xl mx-auto" data-aos="fade-up">
-                    Dengan memohon rahmat dan ridho Allah SWT, sebagai ungkapan rasa syukur kami atas karunia-Nya, kami bermaksud menyelenggarakan Tasyakuran Khitanan putra kami:
-                </p>
-                <div class="my-12" data-aos="zoom-in">
-                    <img src="https://i.ibb.co/gR2Ym4w/anak-placeholder.png" alt="Muhammad Kenzie Alfaro" class="w-48 h-48 md:w-60 md:h-60 rounded-full mx-auto object-cover border-4 border-gold shadow-lg">
+            <!-- Profile Section -->
+            <section id="profile" class="py-20 px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <p class="font-cursive text-4xl text-gold" data-aos="fade-down">Assalamu'alaikum Wr. Wb.</p>
+                    <p class="mt-6 max-w-2xl mx-auto" data-aos="fade-up">
+                        Dengan memohon rahmat dan ridho Allah SWT, sebagai ungkapan rasa syukur kami atas karunia-Nya, kami bermaksud menyelenggarakan Tasyakuran Khitanan putra kami:
+                    </p>
+                    <div class="my-12" data-aos="zoom-in">
+                        <img src="https://i.ibb.co/gR2Ym4w/anak-placeholder.png" alt="Muhammad Kenzie Alfaro" class="w-48 h-48 md:w-60 md:h-60 rounded-full mx-auto object-cover border-4 border-gold shadow-lg">
+                    </div>
+                    <h3 class="font-cursive text-6xl text-gold" data-aos="fade-up">Muhammad Kenzie Alfaro</h3>
+                    <p class="mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">Putra dari Bpk. Jajang & Ibu. Naning</p>
+                    <img src="https://i.ibb.co/Jqj5B9J/ornament-2.png" alt="Ornament" class="mx-auto mt-8 w-64" data-aos="zoom-in" data-aos-delay="200">
                 </div>
-                <h3 class="font-cursive text-6xl text-gold" data-aos="fade-up">Muhammad Kenzie Alfaro</h3>
-                <p class="mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">Putra dari Bpk. Jajang & Ibu. Naning</p>
-                <img src="https://i.ibb.co/Jqj5B9J/ornament-2.png" alt="Ornament" class="mx-auto mt-8 w-64" data-aos="zoom-in" data-aos-delay="200">
-            </div>
-        </section>
+            </section>
 
-        <!-- Save The Date Section -->
-        <section id="date" class="py-20 px-6 bg-card">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Save The Date</h2>
-                <p class="mt-4 mb-12" data-aos="fade-up">Dengan penuh rasa syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada acara tasyakuran putra kami.</p>
-                <div class="flex flex-col md:flex-row gap-8 justify-center">
-                    <!-- Tasyakuran Khitan -->
-                    <div class="bg-dark-teal p-8 rounded-2xl shadow-lg flex-1" data-aos="fade-up-right">
-                        <h3 class="font-cursive text-4xl text-gold">Tasyakuran Khitan</h3>
-                        <p class="mt-4 text-lg font-semibold">Sabtu, 18 November 2025</p>
-                        <p class="mt-2"><i class="far fa-clock mr-2"></i>11.00 WIB - Selesai</p>
-                        <p class="mt-2"><i class="fas fa-map-marker-alt mr-2"></i>Kediaman Kami</p>
-                        <p class="text-sm mt-1">Jl. Mawar No. 1, Desa Suka Maju, Kec. Bahagia, Kab. Sejahtera</p>
-                        <a href="https://maps.app.goo.gl/u5nKxZz8qY9JzX7aA" target="_blank" class="inline-block mt-6 btn-gold text-sm font-bold py-2 px-6 rounded-full">
-                            <i class="fas fa-map-marked-alt mr-2"></i>Lihat Peta
+            <!-- Save The Date Section -->
+            <section id="date" class="py-20 px-6 bg-card">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Save The Date</h2>
+                    <p class="mt-4 mb-12" data-aos="fade-up">Dengan penuh rasa syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada acara tasyakuran putra kami.</p>
+                    <div class="flex flex-col md:flex-row gap-8 justify-center">
+                        <!-- Tasyakuran Khitan -->
+                        <div class="bg-dark-teal p-8 rounded-2xl shadow-lg flex-1" data-aos="fade-up-right">
+                            <h3 class="font-cursive text-4xl text-gold">Tasyakuran Khitan</h3>
+                            <p class="mt-4 text-lg font-semibold">Sabtu, 18 November 2025</p>
+                            <p class="mt-2"><i class="far fa-clock mr-2"></i>11.00 WIB - Selesai</p>
+                            <p class="mt-2"><i class="fas fa-map-marker-alt mr-2"></i>Kediaman Kami</p>
+                            <p class="text-sm mt-1">Jl. Mawar No. 1, Desa Suka Maju, Kec. Bahagia, Kab. Sejahtera</p>
+                            <a href="https://maps.app.goo.gl/u5nKxZz8qY9JzX7aA" target="_blank" class="inline-block mt-6 btn-gold text-sm font-bold py-2 px-6 rounded-full">
+                                <i class="fas fa-map-marked-alt mr-2"></i>Lihat Peta
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-12" data-aos="fade-up">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Tasyakuran+Khitanan+Kenzie&dates=20251118T110000/20251118T170000&details=Tasyakuran+Khitanan+Muhammad+Kenzie+Alfaro&location=Jl.+Mawar+No.+1,+Desa+Suka+Maju,+Kec.+Bahagia,+Kab.+Sejahtera" target="_blank" class="btn-gold font-bold py-3 px-8 rounded-full">
+                            <i class="far fa-calendar-alt mr-2"></i>Tambahkan ke Kalender
                         </a>
                     </div>
                 </div>
-                <div class="mt-12" data-aos="fade-up">
-                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Tasyakuran+Khitanan+Kenzie&dates=20251118T110000/20251118T170000&details=Tasyakuran+Khitanan+Muhammad+Kenzie+Alfaro&location=Jl.+Mawar+No.+1,+Desa+Suka+Maju,+Kec.+Bahagia,+Kab.+Sejahtera" target="_blank" class="btn-gold font-bold py-3 px-8 rounded-full">
-                        <i class="far fa-calendar-alt mr-2"></i>Tambahkan ke Kalender
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Gallery Section -->
-        <section id="gallery" class="py-20 px-6 text-center">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Momen Bahagia</h2>
-                <p class="mt-4 mb-12" data-aos="fade-up">Beberapa momen kebersamaan ananda Kenzie.</p>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div data-aos="zoom-in"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 1" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                    <div data-aos="zoom-in" data-aos-delay="100"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 2" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                    <div data-aos="zoom-in" data-aos-delay="200"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 3" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                    <div data-aos="zoom-in" data-aos-delay="300"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 4" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                    <div data-aos="zoom-in" data-aos-delay="400"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 5" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                    <div data-aos="zoom-in" data-aos-delay="500"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 6" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gift Section -->
-        <section id="gift" class="py-20 px-6 bg-card text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Kirim Hadiah</h2>
-                <p class="mt-4 mb-8" data-aos="fade-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless untuk ananda Kenzie.</p>
-                
-                <div class="mt-8 grid md:grid-cols-2 gap-8 text-left">
-                    <!-- Amplop Digital -->
-                    <div class="bg-dark-teal p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://i.ibb.co/L0f5cDm/bca-logo.png" alt="BCA" class="h-8 mb-4">
-                        <p>Bank Central Asia</p>
-                        <p class="text-2xl font-bold my-2 tracking-widest" id="account-number">1234567890</p>
-                        <p>a.n. Jajang (Ayah Kenzie)</p>
-                        <button onclick="copyToClipboard('#account-number', 'Nomor rekening disalin!')" class="inline-block mt-6 bg-gray-500 hover:bg-gray-600 text-white text-sm font-bold py-2 px-6 rounded-full">
-                            <i class="far fa-copy mr-2"></i>Salin No. Rekening
-                        </button>
-                    </div>
-                    <!-- Kado Fisik -->
-                    <div class="bg-dark-teal p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-gift mr-3 text-gold"></i>Kirim Kado Fisik</h3>
-                        <p class="font-semibold">Penerima:</p>
-                        <p>Keluarga Bpk. Jajang</p>
-                        <p class="font-semibold mt-2">Alamat:</p>
-                        <p id="gift-address">Jl. Mawar No. 1, Desa Suka Maju, Kec. Bahagia, Kab. Sejahtera, 12345</p>
-                        <button onclick="copyToClipboard('#gift-address', 'Alamat berhasil disalin!')" class="inline-block mt-6 bg-gray-500 hover:bg-gray-600 text-white text-sm font-bold py-2 px-6 rounded-full">
-                            <i class="far fa-copy mr-2"></i>Salin Alamat
-                        </button>
+            </section>
+            
+            <!-- Gallery Section -->
+            <section id="gallery" class="py-20 px-6 text-center">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Momen Bahagia</h2>
+                    <p class="mt-4 mb-12" data-aos="fade-up">Beberapa momen kebersamaan ananda Kenzie.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div data-aos="zoom-in"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 1" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
+                        <div data-aos="zoom-in" data-aos-delay="100"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 2" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
+                        <div data-aos="zoom-in" data-aos-delay="200"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 3" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
+                        <div data-aos="zoom-in" data-aos-delay="300"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 4" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
+                        <div data-aos="zoom-in" data-aos-delay="400"><img src="https://placehold.co/600x600/1a3a3a/c2a167?text=Kenzie" alt="Gallery 5" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
+                        <div data-aos="zoom-in" data-aos-delay="500"><img src="https://placehold.co/600x800/1a3a3a/c2a167?text=Kenzie" alt="Gallery 6" class="rounded-lg shadow-lg w-full h-full object-cover"></div>
                     </div>
                 </div>
+            </section>
 
-                 <div id="copy-feedback" class="mt-6 text-green-400 opacity-0 transition-opacity duration-300"></div>
-            </div>
-        </section>
-
-        <!-- Wishes Section -->
-        <section id="wishes" class="py-20 px-6 text-center">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Ucapan & Do'a</h2>
-                <p class="mt-4 mb-12" data-aos="fade-up">Berikan ucapan dan do'a terbaik Anda untuk ananda Kenzie.</p>
-                
-                <!-- Form -->
-                <form id="wishes-form" class="bg-card p-8 rounded-2xl shadow-lg text-left" data-aos="fade-up">
-                    <div class="mb-4">
-                        <label for="name" class="block mb-2">Nama</label>
-                        <input type="text" id="name" name="name" class="w-full bg-dark-teal rounded-lg p-3 border border-gray-600 focus:border-gold focus:ring-gold" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block mb-2">Ucapan</label>
-                        <textarea id="message" name="message" rows="4" class="w-full bg-dark-teal rounded-lg p-3 border border-gray-600 focus:border-gold focus:ring-gold" required></textarea>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block mb-2">Konfirmasi Kehadiran</label>
-                        <div class="flex gap-4">
-                            <label class="flex items-center">
-                                <input type="radio" name="attendance" value="Hadir" class="form-radio text-gold focus:ring-gold" checked>
-                                <span class="ml-2">Hadir</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" name="attendance" value="Tidak Hadir" class="form-radio text-gold focus:ring-gold">
-                                <span class="ml-2">Tidak Hadir</span>
-                            </label>
+            <!-- Gift Section -->
+            <section id="gift" class="py-20 px-6 bg-card text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Kirim Hadiah</h2>
+                    <p class="mt-4 mb-8" data-aos="fade-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless untuk ananda Kenzie.</p>
+                    
+                    <div class="mt-8 grid md:grid-cols-1 gap-8 text-left">
+                        <!-- Amplop Digital -->
+                        <div class="bg-dark-teal p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                            <img src="https://i.ibb.co/L0f5cDm/bca-logo.png" alt="BCA" class="h-8 mb-4">
+                            <p>Bank Central Asia</p>
+                            <p class="text-2xl font-bold my-2 tracking-widest" id="account-number">1234567890</p>
+                            <p>a.n. Jajang (Ayah Kenzie)</p>
+                            <button onclick="copyToClipboard('#account-number', 'Nomor rekening disalin!')" class="inline-block mt-6 bg-gray-500 hover:bg-gray-600 text-white text-sm font-bold py-2 px-6 rounded-full">
+                                <i class="far fa-copy mr-2"></i>Salin No. Rekening
+                            </button>
+                        </div>
+                        <!-- Kado Fisik -->
+                        <div class="bg-dark-teal p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-gift mr-3 text-gold"></i>Kirim Kado Fisik</h3>
+                            <p class="font-semibold">Penerima:</p>
+                            <p>Keluarga Bpk. Jajang</p>
+                            <p class="font-semibold mt-2">Alamat:</p>
+                            <p id="gift-address">Jl. Mawar No. 1, Desa Suka Maju, Kec. Bahagia, Kab. Sejahtera, 12345</p>
+                            <button onclick="copyToClipboard('#gift-address', 'Alamat berhasil disalin!')" class="inline-block mt-6 bg-gray-500 hover:bg-gray-600 text-white text-sm font-bold py-2 px-6 rounded-full">
+                                <i class="far fa-copy mr-2"></i>Salin Alamat
+                            </button>
                         </div>
                     </div>
-                    <button type="submit" class="btn-gold font-bold py-3 px-8 rounded-full w-full">
-                        <i class="fas fa-paper-plane mr-2"></i>Kirim Ucapan
-                    </button>
-                </form>
 
-                <!-- Wishes List -->
-                <div id="wishes-list" class="mt-12 text-left space-y-4">
-                    <!-- Wishes will be loaded here by JavaScript -->
-                    <div class="text-center p-8">
-                        <p>Memuat ucapan...</p>
+                     <div id="copy-feedback" class="mt-6 text-green-400 opacity-0 transition-opacity duration-300"></div>
+                </div>
+            </section>
+
+            <!-- Wishes Section -->
+            <section id="wishes" class="py-20 px-6 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="font-cursive text-5xl text-gold" data-aos="fade-down">Ucapan & Do'a</h2>
+                    <p class="mt-4 mb-12" data-aos="fade-up">Berikan ucapan dan do'a terbaik Anda untuk ananda Kenzie.</p>
+                    
+                    <!-- Form -->
+                    <form id="wishes-form" class="bg-card p-8 rounded-2xl shadow-lg text-left" data-aos="fade-up">
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2">Nama</label>
+                            <input type="text" id="name" name="name" class="w-full bg-dark-teal rounded-lg p-3 border border-gray-600 focus:border-gold focus:ring-gold" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2">Ucapan</label>
+                            <textarea id="message" name="message" rows="4" class="w-full bg-dark-teal rounded-lg p-3 border border-gray-600 focus:border-gold focus:ring-gold" required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block mb-2">Konfirmasi Kehadiran</label>
+                            <div class="flex gap-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="attendance" value="Hadir" class="form-radio text-gold focus:ring-gold" checked>
+                                    <span class="ml-2">Hadir</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="attendance" value="Tidak Hadir" class="form-radio text-gold focus:ring-gold">
+                                    <span class="ml-2">Tidak Hadir</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-gold font-bold py-3 px-8 rounded-full w-full">
+                            <i class="fas fa-paper-plane mr-2"></i>Kirim Ucapan
+                        </button>
+                    </form>
+
+                    <!-- Wishes List -->
+                    <div id="wishes-list" class="mt-12 text-left space-y-4">
+                        <!-- Wishes will be loaded here by JavaScript -->
+                        <div class="text-center p-8">
+                            <p>Memuat ucapan...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Footer -->
-        <footer class="py-20 px-6 text-center bg-card">
-            <div class="max-w-4xl mx-auto" data-aos="fade-up">
-                <p class="max-w-2xl mx-auto">
-                    Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu kepada putra kami.
-                </p>
-                <p class="font-cursive text-4xl text-gold mt-8">Wassalamu'alaikum Wr. Wb.</p>
-                <h3 class="font-cursive text-6xl text-gold mt-12">Kenzie</h3>
-                <p class="mt-4 text-lg">Kami yang berbahagia,</p>
-                <p class="mt-1 font-semibold">Keluarga Bpk. Jajang & Ibu. Naning</p>
-                <p class="mt-16 text-xs text-gray-400">&copy; 2025 Dibuat dengan <i class="fas fa-heart text-red-500"></i>. All Rights Reserved.</p>
-            </div>
-        </footer>
+            <!-- Footer -->
+            <footer class="py-20 px-6 text-center bg-card">
+                <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                    <p class="max-w-2xl mx-auto">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu kepada putra kami.
+                    </p>
+                    <p class="font-cursive text-4xl text-gold mt-8">Wassalamu'alaikum Wr. Wb.</p>
+                    <h3 class="font-cursive text-6xl text-gold mt-12">Kenzie</h3>
+                    <p class="mt-4 text-lg">Kami yang berbahagia,</p>
+                    <p class="mt-1 font-semibold">Keluarga Bpk. Jajang & Ibu. Naning</p>
+                    <p class="mt-16 text-xs text-gray-400">&copy; 2025 Dibuat dengan <i class="fas fa-heart text-red-500"></i>. All Rights Reserved.</p>
+                </div>
+            </footer>
 
-    </main>
+        </main>
     
+    </div> <!-- End Mobile View Container -->
+
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -485,8 +490,9 @@
             openButton.addEventListener('click', () => {
                 cover.classList.add('cover-open');
                 mainContent.style.opacity = '1';
-                document.body.style.overflowY = 'auto';
-                musicPlayer.classList.remove('hidden');
+                // The body scroll is handled by the main container now
+                document.querySelector('.relative.max-w-md').style.overflowY = 'auto';
+
 
                 // Trigger ornament animation
                 heroSection.classList.add('ornaments-visible');
