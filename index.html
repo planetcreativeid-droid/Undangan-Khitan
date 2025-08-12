@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Khitanan - Muhammad Kenzie Alfaro</title>
+    <title>Undangan Khitanan - Moh. Zacky Haikal Santoso</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -463,15 +463,21 @@
             }, 1000); // Update setiap 1 detik
 
             // FUNGSI 4: Logika Tombol Musik (Play/Pause)
-            musicToggle.addEventListener('click', () => {
-                if (music.paused) {
-                    music.play();
-                    musicToggle.querySelector('i').classList.add('spin-slow');
-                } else {
-                    music.pause();
-                    musicToggle.querySelector('i').classList.remove('spin-slow');
-                }
-            });
+musicToggle.addEventListener('click', () => {
+    if (music.paused) {
+        music.play();
+        musicToggle.classList.remove('bg-gray-500');
+        musicToggle.classList.add('bg-amber-400');
+        musicIcon.classList.add('spin-slow');
+        slashIcon.classList.add('hidden');
+    } else {
+        music.pause();
+        musicToggle.classList.add('bg-gray-500');
+        musicToggle.classList.remove('bg-amber-400');
+        musicIcon.classList.remove('spin-slow');
+        slashIcon.classList.remove('hidden');
+    }
+});
 
             // FUNGSI 5: Logika Buku Tamu (menggunakan Local Storage)
             const wishesForm = document.getElementById('wishes-form');
